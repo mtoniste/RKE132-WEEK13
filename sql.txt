@@ -1,0 +1,13 @@
+select customer.firstName, customer.lastName, status.statusType from customerStatus
+join customer on  customer.rowid = customerStatus.customerId
+join status on status.rowid = customerStatus.statusId
+
+INSERT INTO customer (firstName,lastName,dateOfBirth) VALUES (
+  'Harry',
+  'Potter',
+  '07-31-1980'
+); 
+
+delete from customer 
+where rowid = 8
+
